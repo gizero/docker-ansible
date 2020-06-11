@@ -6,7 +6,7 @@ if [[ -n "${SSH_KEY}" ]] && [[ -f ${HOME}/.ssh/${SSH_KEY} ]]; then
 fi
 
 if [ -f ${PYTHON_REQUIREMENTS:-requirements-pip.txt} ]; then
-  pip3 install -r ${PYTHON_REQUIREMENTS:--requirements-pip.txt}
+  pip3 install -r ${PYTHON_REQUIREMENTS:-requirements-pip.txt}
 fi
 
 if [ -f ${ANSIBLE_REQUIREMENTS:-requirements.yml} ]; then
