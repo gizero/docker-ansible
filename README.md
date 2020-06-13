@@ -89,8 +89,8 @@ We need to run a playbook to add remote hosts' public keys to known_hosts before
 
 ```
 docker run -it --rm \
-  -e ANSIBLE_PRE_PLAYBOOK=ssh_keyscan.yml
-  -e ANSIBLE_PRE_PLAYBOOK_OPTS=--forks=1
+  -e ANSIBLE_PRE_PLAYBOOK=ssh_keyscan.yml \
+  -e ANSIBLE_PRE_PLAYBOOK_OPTS=--forks=1 \
   -e SSH_KEY=id_ed25519 \
   -v $HOME/.ssh/id_ed25519:/root/.ssh/id_ed25519:ro \
   -v $PWD:/ansible \
