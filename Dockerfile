@@ -1,6 +1,6 @@
 FROM ubuntu:20.04
 RUN apt-get update && \
-    apt-get install -y curl openssh-client sshpass python3 python3-pip git-core && \
+    apt-get install -y curl openssh-client sshpass python3 python3-pip git-core vim jq && \
     pip3 install ansible && \
     rm -rf /var/lib/apt/lists/*
 WORKDIR /ansible
