@@ -1,7 +1,7 @@
 FROM ubuntu:20.04
 RUN apt-get update && \
     apt-get install -y curl openssh-client sshpass python3 python3-pip git-core vim jq yamllint && \
-    pip3 install ansible ansible-lint && \
+    pip3 install ansible==4.6.0 ansible-lint==5.1.3 && \
     rm -rf /var/lib/apt/lists/*
 WORKDIR /ansible
 COPY docker-entrypoint.sh /usr/bin/
