@@ -5,6 +5,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 WORKDIR /ansible
 COPY docker-entrypoint.sh /usr/bin/
+COPY ansible-ssh /usr/bin/
 ENTRYPOINT [ "docker-entrypoint.sh" ]
 CMD [ "--help" ]
 
