@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:24.04
 RUN apt-get update && \
     apt-get install -y curl openssh-client sshpass python3 python3-pip git-core vim jq yamllint && \
     rm -rf /var/lib/apt/lists/*
